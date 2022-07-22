@@ -23,7 +23,6 @@ try{
 }
 
 //deleting in data in db
-//deleting in data in db
 async function deleteInDB(id){
     try{
  
@@ -35,6 +34,21 @@ async function deleteInDB(id){
      return await response.json();
  
     }catch(e){console.error('error in deleting',e);}
+ }
+
+ //update data in db
+ async function updateInDB(id,obj){
+   try{
+      
+    const req={
+        method:'PATCH',
+        headers:{'content-type':'application/json; charset=UTF-8',},
+        body:JSON.stringify(obj),
+     }
+     const url='http://localhost:3000/emp/'+id;
+     const res=await fetch(url,req);
+     return await res.json();
+    }catch(e){console.error('error in updating',e);}
  }
 
 

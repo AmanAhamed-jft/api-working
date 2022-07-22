@@ -68,7 +68,6 @@ let btn=document.getElementById('btn');
 let empName=document.getElementById('name');
 let desig=document.getElementById('desig');
 let salaryEmp=document.getElementById('salary');
-let myIndex=0;
 let lastIndexClick = -1;
 let arr=[];
 //load the data in table
@@ -145,6 +144,29 @@ function appendRowInTable(obj){
 //delete data
 async function deleteData(id){
      const db=await deleteInDB(id);
+}
+
+//hiding add btn ,visible updte btn and storing click index
+function updateData(id){
+  updateBtn=document.getElementById('update-btn');
+  updateBtn.style.display='block';
+  btn.style.display='none';
+  lastIndexClick=id;
+  empName.value=arr[id].name;  desig.value=arr[id].job;  salaryEmp.value=arr[id].salary;
+}
+//performing updating client site
+async function updatingData(){
+  let name=empName.value;
+  let job=desig.value;
+  let salary=salaryEmp.value;
+  if(name==''|| job=='' ||salary==''){
+   alert("Field can't be empty");
+  }else{
+    let obj={ id:lastIndexClick, name:name,job:job,salary:salary }
+    const res=await updateInDB(lastIndexClick,obj);
+  }
+  updateBtn.style.display='none';
+  btn.style.display='block';
 }
 
 // function addData(e){
