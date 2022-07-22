@@ -1,0 +1,40 @@
+{
+  "emp": [
+    {
+      "id": 0,
+      "name": "amanShahAhamed",
+      "job": "SDE",
+      "salary": "10000"
+    },
+    {
+      "id": 1,
+      "name": "gaurav",
+      "job": "SDE",
+      "salary": 100000
+    },
+    {
+      "id": 2,
+      "name": "new_branch",
+      "job": "sfsffs",
+      "salary": "1000000"
+    },
+    {
+      "id": 3,
+      "name": "remote",
+      "job": "sfsffs",
+      "salary": "1000000"
+    },
+    {
+      "id": 4,
+      "name": "amann",
+      "job": " 232",
+      "salary": "1000000"
+    },
+    {
+      "id": 5,
+      "name": "imran",
+      "job": "sfsffs",
+      "salary": "1000000"
+    }
+  ]
+}

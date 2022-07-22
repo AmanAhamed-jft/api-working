@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+    table, th, td {
+    border:1px solid black;
+    border-collapse: collapse;
+     }
+</style>
+    </style>
+    
+</head>
+<body>
+     
+    <form action="">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required >
+        <label for="desig">Designatin</label>
+        <input type="text" name="desig" id="desig" required>
+        <label for="salary">Salary</label>
+        <input type="text" name="salary" id="salary" required>
+        <button id = 'btn'type="button" onclick="addData()">Add</button>
+        <button type="button" onclick="Load()">Load Table</button>
+
+    </form>
+
+    <table style="width: 100%;">
+        <caption style="font-size: 2rem; font-weight: bolder;">Employee-Data</caption>
+        <th class="table-head">
+            <tr style="font-weight: bold; font-size:1.4rem;">
+                <td>Name</td>
+                <td>Designation</td>
+                <td>Salary</td>
+                <td></td>
+            </tr>
+        </th>
+        <tbody id="myTable">
+        </tbody>
+    </table>
+    <script src="api.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
